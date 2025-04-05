@@ -13,6 +13,7 @@ body {
     background-color: white;
 }
 
+
 /*estilos pagina principal*/
 .container-xl{
     position: relative;
@@ -20,7 +21,7 @@ body {
     width: 50%;
     max-width: 900px;
     height: 70vh;
-    background-image:url('img/agro.jpg');
+    background-image:url('../img/agro.jpg');
     background-size: cover;
     border: 2px solid black;
     border-radius: 10px;
@@ -46,6 +47,11 @@ body {
    bottom: 50%;
    left: 60%;
    transform: translateX(-50%) rotate(-10deg);
+}
+
+#registro{
+    position: relative;
+    margin-top: 10px;
 }
 
 /*estilos pagina de login*/
@@ -163,42 +169,43 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #A9ECA2;
-    height: auto;
+    position: relative;
+    display: flex;
+    width:45%;
+    height:90%;
     border: 2px solid black;
     border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    width: 50vw;
-    max-width: 450px;
-    margin: auto;
 }
-
 
 .bienvenida {
     font-size: 24px;
     font-weight: bold;
     color: black;
-    text-align: center;
-    margin-bottom: 10px;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-right: -145px;
 }
 
-    .dashboard {
-        align-self: flex-start;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(240, 241, 130);
-        width: 90vw;
-        max-width: 300px;
-        border: 2px solid black;
-        border-radius: 10px;
-        padding: 10px;
-        margin-top: 20px;
-        height: 100%;
-    }
+.dashboard {
+    align-self: flex-start;                     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(240, 241, 130);
+    width: 50%;
+    max-width: 150px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 0px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+}
 
 .perfil{
-    width: 100px;
+    width: 120px;
     position: absolute;
     bottom: 80%;
     left:50%;
@@ -206,19 +213,23 @@ body {
 }
 
 #etiqueta{
-    width: 60px;
-    margin: 10px 0;
+    width: 80px;
+    margin: 35px 0;
     background-color: #ece1a2;
+    margin-top: 270px;
 }
 
-.link{
-    top: 25%;
+
+.link2{
+    top: 90px;
+    margin: 22px;
     position: absolute;
 }
 
 .engrane{
     width: 60px;
     margin: 10px 0;
+    margin-top: 55px;
 }
 
 .cerrar_sesion{
@@ -229,6 +240,7 @@ body {
 .monitoreo{
     width: 80%;
     max-width: 250px;
+    margin-top: 150px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -242,7 +254,9 @@ body {
 
 .analisis{
     width: 80%;
-    max-width: 250px;
+    margin-top: -190px;
+    max-width: 160px;
+    margin-left: 360px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -250,7 +264,8 @@ body {
     color: white;
     font-size: 16px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: -55px;
+    margin-right: -360px;
 }
 
 #etiquetamonitoreo{
@@ -258,23 +273,38 @@ body {
     font-size: 16px;
     text-align: center;
     margin-top: 5px;
+    margin-left: -45px;
 }
 
-/* Media Queries para responsividad */
+/* medidas de diseño responsivo 
 @media (max-width: 600px) {
-    .container, .dashboard {
-        width: 95vw;
+    .container {
+        width: 50%;
         padding: 5px;
+    }
+
+    .dashboard{
+        width: 50%;
+        padding: 5px;  
     }
 
     .bienvenida {
         font-size: 20px;
     }
 
-    .perfil, .engrane, .cerrar_sesion {
+    .perfil {
         width: 50px;
     }
+
+    .engrane{
+        width: 50px;
+    }
+
+    .cerrar_sesion{
+        width: 50px; 
+    }
 }
+    */
 
 /*estilos para la pàgina de mis cultivos*/
 .recuadro {
@@ -291,3 +321,148 @@ body {
     padding: 10px;
     text-align: center;
 }
+
+.contendor_analisis{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedor_monitoreo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedor_perfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.contenedor_configuracion{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.salir{
+    width: -30px;
+    max-width: -30px;
+    margin-top: 200px;
+}
+
+.recuadro2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.salir2{
+    width: -30px;
+    max-width: -30px;
+    margin-top: 200px;
+}
+
+.recuadro3{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.salir3{
+    width: -30px;
+    max-width: -30px;
+    margin-top: 200px;
+}
+
+.recuadro4{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A9ECA2;
+    width: 90vw;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.salir4{
+    width: 30px;
+    height: 30px;
+    margin-top: 100%;
+}
+
+.configuracion{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    position: absolute;
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color:black;
+        color: white;
+    }
+}
+
