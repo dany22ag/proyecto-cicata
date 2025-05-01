@@ -8,8 +8,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
 </head>
 <body>
-    <div class="container">
-        <h2 class="bienvenida">¡Bienvenid@ Daniela!</h2>
+    <div id="menu-barra">
+        <img src="../img/menu.png" id="iconomenu" class="menu"> 
+    </div>
+    <div class="container d-flex">
+        <div class="dashboard sidebar" id="sidebar">
+            <img src="../img/USUARIO-removebg-preview.png" class="perfil mt-2">
+            <a href="perfil.html" class="link d-block mt-2">Daniela Guadalupe Aguilar Aguilar</a>
+            <a href="miscultivos.html">
+                <button type="button" class="btn btn-success w-100" id="etiqueta">Mis cultivos</button>
+            </a>
+            
+                <a href="configurcion.html">
+                    <img src="../img/configuracion-removebg-preview.png" class="icono engrane">
+                </a>
+                <a href="login.html">
+                    <img src="../img/log_out-removebg-preview.png" class="icono cerrar_sesion">
+                </a>
+        </div>
+        <div id="contenido">
+            <h2 class="bienvenida">¡Bienvenid@ Daniela!</h2>
         <a href="monitoreo.html">
             <img src="../img/monitoreo.jpg" class="monitoreo">
         </a>
@@ -18,19 +36,10 @@
             <img src="../img/analisis datos.jpg" class="analisis">
         </a>
         <label for="analisis" class="form-label" id="etiquetanalisis">Análisis</label>
-        <div class="dashboard">
-            <a href="miscultivos.html">
-                <button type="button" class="btn btn-success w-100" id="etiqueta">Mis cultivos</button>
-            </a>
-            <a href="perfil.html" class="link">Daniela Guadalupe Aguilar Aguilar</a>
-            <img src="../img/USUARIO-removebg-preview.png" class="perfil">
-            <a href="configurcion.html">
-                <img src="../img/configuracion-removebg-preview.png" class="engrane">
-            </a>
-            <a href="login.html">
-                <img src="../img/log_out-removebg-preview.png" class="cerrar_sesion">
-            </a>
         </div>
     </div>
+    <script src="funciones.js"></script>
 </body>
 </html>
+
+
