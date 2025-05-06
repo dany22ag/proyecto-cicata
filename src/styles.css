@@ -327,158 +327,169 @@ body {
 
 
 /*pagina de bienvenida*/
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 .container {
+    display: flex;
     background-color: #A9ECA2;
     padding: 20px;
     border-radius: 10px;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-.bienvenida {
+.menutoggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1001;
+    cursor: pointer;
+}
+
+.menutoggle img {
+    width: 40px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ece1a2;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    padding: 20px;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.perfil {
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 30px;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.link {
+    margin-top: 100px;
+    margin-left: 50px;
+    position: relative;
+    text-align: center;
+
+}
+
+#menulateral{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+#etiqueta {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ece1a2;
+    padding: 10px;
+}
+
+.engrane {
+    margin-left: 70px;
+    width: 60px;
+    margin-top: 10px;
+}
+
+.cerrar_sesion {
+    margin-left: 70px;
+    width: 60px;
+    margin-top: 100px;
+}
+
+.letrero {
     font-size: 24px;
     font-weight: bold;
     color: black;
     text-align: center;
     margin-bottom: 10px;
-}
-
-.dashboard {
-    background-color: #ece1a2;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-}
-
-.contenido{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.menu{
-    width: 50px;
-    height: 50px;
-}
-
-.menu-barra{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-    cursor: pointer;
-}
-
-.sidebar{
-    transition: transform 0.5s ease;
-}
-
-.engrane{
-    margin-bottom: 100px;
-    margin-left: 100px;
-}
-
-.cerrar_sesion{
-    margin: 0;
-}
-
-.perfil{
-    width: 100px;
-    position: relative;
-    bottom: auto;
-    transform: translateX(-50%) rotate(0deg);
-    margin-top: -200px;
-    margin-left: 0px;
-}
-
-#etiqueta{
-    width: 80%;
-    margin-top: 100px;
-    background-color: #ece1a2;
-    padding: 10px;
-}
-
-.link{
-    margin-top: 15px;
-    position: relative;
-}
-
-.engrane{
-    width: 60px;
-    margin-left: -20px;
-    margin-top: 350px;
-}
-
-.cerrar_sesion{
-    margin-bottom: 0px;
-    width: 60px;
+    margin-left: 250px;
 }
 
 .monitoreo{
     width: 80%;
-    max-width: 250px;
+    max-width: 300px;
     transition: transform 0.3s ease-in-out;
+    margin-left: 300px;
+}
+
+.analisis {
+    width: 80%;
+    max-width: 240px;
+    transition: transform 0.3s ease-in-out;
+    margin-left: 150px;
 }
 
 .monitoreo:hover{
-    transform: scale(1.2);
-}
-
-.analisis:hover{
     transform: scale(1.1);
 }
 
-.analisis{
-    width: 80%;
-    max-width: 250px;
-    transition: transform 0.3s ease-in-out;
+.analisis:hover {
+    transform: scale(1.1);
 }
 
-#etiquetanalisis{
+#etiquetanalisis {
     color: white;
     font-size: 16px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 150px;
+    margin-left: -80px;
 }
 
 #etiquetamonitoreo{
     color: white;
     font-size: 16px;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 150px;
+    margin-left: -210px;
 }
 
-@media screen and (max-width: 480px){
-    .container{
+@media screen and (max-width: 480px) {
+    .container {
         width: 90vw;
         padding: 15px;
     }
 
-    .bienvenida{
+    .bienvenida {
         font-size: 20px;
     }
 
-    .monitoreo{
-        width: 100%;
-    }
-
-    .analisis{
-        width: 100%;
-    }
-
-    .perfil{
+    .perfil {
         width: 60px;
         position: static;
-        margin: 10px 0;
+        margin: 10px auto;
+        transform: none;
     }
 
-    .link{
+    .link {
         position: static;
         margin: 10px 0;
     }
 
-    .dashboard{
+    .dashboard {
         width: 100%;
         padding: 10px;
         align-self: center;
@@ -488,11 +499,11 @@ body {
         width: 40px;
     }
 
-    .cerrar_sesion{
+    .cerrar_sesion {
         width: 40px;
     }
 
-    #etiqueta{
+    #etiqueta {
         width: 100%;
     }
 
@@ -500,30 +511,27 @@ body {
         font-size: 14px;
     }
 
-    #etiquetanalisis{
-        font-weight: 14px;
+    #etiquetanalisis {
+        font-size: 14px;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 768px){
-    .container{
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
         width: 80vw;
     }
 
-    .bienvenida{
+    .bienvenida {
         font-size: 22px;
     }
 
-    .perfil{
+    .perfil {
         width: 80px;
-        position: relative;
-        bottom: auto;
-        left: auto;
-        transform: none;
         margin-bottom: 10px;
+        transform: none;
     }
 
-    .dashboard{
+    .dashboard {
         width: 80%;
     }
 
@@ -531,34 +539,32 @@ body {
         width: 50px;
     }
 
-    .cerrar_sesion{
+    .cerrar_sesion {
         width: 50px;
     }
 
-    #etiqueta{
+    #etiqueta {
         width: 80%;
     }
 
-    .link{
+    .link {
         position: static;
         margin: 10px 0;
     }
 }
 
-@media screen and (min-width: 769px){
-    .container{
-        min-height: 100vh;
-        height: auto;
+@media screen and (min-width: 769px) {
+    .container {
+        flex-direction: row;
     }
 
-    .perfil{
+    .perfil {
         width: 100px;
-        position: static;
         margin-bottom: 15px;
         transform: none;
     }
 
-    .dashboard{
+    .dashboard {
         width: 300px;
     }
 
@@ -566,11 +572,11 @@ body {
         width: 60px;
     }
 
-    .cerrar_sesion{
+    .cerrar_sesion {
         width: 60px;
     }
 
-    #etiqueta{
+    #etiqueta {
         width: 60px;
     }
 }

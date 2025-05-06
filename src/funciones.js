@@ -1,12 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const menuIcon = document.getElementById("menu-icon");
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("togglemenu");
     const sidebar = document.getElementById("sidebar");
 
-    menuIcon.addEventListener("mouseover", () => {
-        sidebar.classList.add("active");
-    });
-
-    sidebar.addEventListener("mouseleave", () => {
-        sidebar.classList.remove("active");
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
     });
 });
